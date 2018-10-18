@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>
 		Laborator 2
 	</title>
 </head>
 <body>
-	<div class="text">
-		<h1>This is a title</h1>
-		<strong>Bold enough?</strong>
-		<em> Italic? Yes!</em>
-		<p>Lorem ipsu bla bla bla bla</p>
-		<a href="https://www.google.ro">Goagle</a>
-	</div>
+	  	<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="users.html">Users</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
 
-	<hr>
+	  	<div class="hero-image">
+	  		<div class="hero-text">
+			  	<h1>This is a title</h1>
+				<p>And I'm a Photographer</p>
+				<button href="#open-modal"><i class="fas fa-external-link-alt"></i> Give me a break!</button>
+			</div>
+		</div>
 
-	<ul>
-		<li><a href="profile.html">Profile</a></li>
-		<li><a href="users.html">Users</a></li>
-		<li><a href="about.html">About</a></li>
-	</ul>
-
-	<hr>
+<!-- Modal window -->
+		<div id="open-modal" class="modal-window">
+		  <div>
+		    <a href="#" title="Close" class="modal-close">Close</a>
+		    <h1>Voilà!</h1>
+		    <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful. <a href="https://twitter.com/timothylong" target="_blank">Say hello on Twitter.</div>
+		    </div>
+		</div>
 
 	<nav>
 		<a href="/html/">HTML</a> |
