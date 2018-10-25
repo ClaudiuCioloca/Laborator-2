@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>
 		Laborator 2
 	</title>
 </head>
 <body>
-	  	<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="profile.html">Profile</a></li>
-			<li><a href="users.html">Users</a></li>
-			<li><a href="about.html">About</a></li>
-		</ul>
+
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">WebSiteName</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="index.html">Home</a></li>
+		      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="profile.html">Profile <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Sub meniu</a></li>
+		          <li><a href="#">Sub meniu</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="users.html">Users</a></li>
+		      <li><a href="about.html">About</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		    </ul>
+		  </div>
+		</nav>
 
 	  	<div class="hero-image">
 	  		<div class="hero-text">
@@ -22,30 +50,20 @@
 			</div>
 		</div>
 
-<!-- Modal window -->
-		<div id="open-modal" class="modal-window">
-		  <div>
-		    <a href="#" title="Close" class="modal-close">Close</a>
-		    <h1>Voilà!</h1>
-		    <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful. <a href="https://twitter.com/timothylong" target="_blank">Say hello on Twitter.</div>
-		    </div>
-		</div>
-
-	<nav>
-		<a href="/html/">HTML</a> |
-		<a href="/css/">CSS</a> |
-		<a href="/js/">JavaScript</a> |
-		<a href="/jquery/">jQuery</a>
-	</nav>
-
-	<hr>
-
+	<div class="container">
 	<blockquote cite="https://www.google.ro">
 		For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
 	</blockquote>
 
-	<hr>
+	<div class="row">
+	    <div class="col-sm-4 margin10">
+		</div>
+	    <div class="col-sm-7 padding10">
+	    	    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a tellus quis metus porta blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed eu nulla blandit felis molestie aliquam ut sed enim. Sed dignissim malesuada lectus vel sodales. Pellentesque ut semper sem, in dapibus purus. Nullam ex nulla, ultricies ut tincidunt ut, vulputate a lectus. Morbi fringilla nunc non metus dictum dapibus eu at tellus. Ut nisi lacus, tristique quis massa id, porta vulputate sapien. Sed interdum in nulla in iaculis. Suspendisse potenti.</p>	
+	    </div>
+  	</div>
 
-	<img src="https://i.imgur.com/GvWZAJB.jpg" alt="cute doge">
+	<div class="well">Basic Well</div>
+	<div>
 </body>
 </html>

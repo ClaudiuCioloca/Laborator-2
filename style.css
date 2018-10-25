@@ -3,36 +3,9 @@ body,html{
 	margin:0;
 }
 
-
-ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	background-color:#263042;
-	overflow: hidden;
+.navbar{
+	margin-bottom:-5px;
 }
-
-li{
-	display: inline;
-	float: right;
-	padding: 8px;
-	background-color: #263042;
-	padding: 30px 50px 30px 50px;
-}
-li a{
-	font-family: "Montserrat";
-	font-style: normal;
-	color: white;
-	text-decoration: none;
-}
-
-li:hover{
-	background-color: #646f84;
-}
-li:active{
-	background-color: red;
-}
-
 .hero-image{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5),
 		rgba(0, 0, 0, 0.5)), url("banner-code.jpg");
@@ -72,58 +45,19 @@ li:active{
 	background-color: #263042;
 	color:white;
 }
-/*Fereastra modala*/
 
-.modal-window {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.25);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  &:target {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  &>div {
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2em;
-    background: #ffffff;
-    color: #333333;
-  }
-  header {
-    font-weight: bold;
-  }
-  h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
-    color: #333333;
-  }
+.container{
+	margin-top:10vh;
+}
+.row{
+	margin-top:10vh;
+}
+.col-sm-4{
+	background-image: url("https://i.imgur.com/GvWZAJB.jpg");
+	height: 200px;
 }
 
-.modal-close {
-  color: #aaa;
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 70px;
-  text-decoration: none;
-  &:hover {
-    color: #000;
-  }
+.padding10 {
+	padding: 10px;
 }
-
 
