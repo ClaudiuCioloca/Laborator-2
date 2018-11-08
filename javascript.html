@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body>
+<button onclick="reverse_string()">Reverse String</button>
+<p id="rev_string"></p>
+
+<button onclick="reverse_number()">Reverse Number</button>
+<p id="rev_number"></p>
+
+<button onclick="remove_char()">Remove Char</button>
+<input id= "char_position" type="number" name="name" placeholder="Enter char position">
+<p id="rem_char"></p>
+
+<button onclick="check_divisible()">Divisible by 3 or 7</button>
+<input id= "number_input" type="number" name="name" placeholder="Enter number">
+<p id="validate_div"></p>
+<script type="text/javascript">
+	//string
+	var word='Abracadabra';
+	document.getElementById("rev_string").innerHTML = word;
+
+
+	function reverse_string(){
+
+	var splitString = word.split("");
+	var reverseArray = splitString.reverse();
+	var joinArray = reverseArray.join("");
+	document.getElementById("rev_string").innerHTML = joinArray;
+	console.log(joinArray);
+	word=joinArray;
+
+	}
+
+	//number
+	var number=123456;
+	document.getElementById("rev_number").innerHTML = number;
+
+	function reverse_number(){
+	var n= number;
+	n = n + "";
+	number = n.split("").reverse().join("");
+	console.log(number);
+	document.getElementById("rev_number").innerHTML = number;
+	}
+	
+	//remove char
+	var string="ABCDEFG";
+	document.getElementById("rem_char").innerHTML = string;
+	function remove_char(){
+		var char_pos=document.getElementById('char_position').value;
+		var part1=string.substring(0,char_pos);
+		char_pos++;
+		var part2=string.substring(char_pos, string.length);
+		string=part1+part2;	
+		console.log(string);
+		document.getElementById("rem_char").innerHTML = string;
+	}
+
+	//check div
+	var x= document.getElementById(number_input).value;
+	function check_divisible(){
+		if((x%3==0)||(x%7==0))
+			document.getElementById("validate_div").innerHTML = "true";
+		else 
+			document.getElementById("validate_div").innerHTML = "false";
+	}
+</script>
+</body>
+</html>
