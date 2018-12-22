@@ -4,56 +4,60 @@
 	<title>Javascript</title>
 </head>
 <body>
-<button onclick="reverse_string()">Reverse String</button>
-<p id="rev_string"></p>
+	<button onclick="reverse_string()">Reverse String</button>
+	<p id="rev_string"></p>
 
-<button onclick="reverse_number()">Reverse Number</button>
-<p id="rev_number"></p>
+	<button onclick="reverse_number()">Reverse Number</button>
+	<p id="rev_number"></p>
 
-<button onclick="remove_char()">Remove Char</button>
-<input id= "char_position" type="number" name="name" placeholder="Enter char position">
-<p id="rem_char"></p>
+	<button onclick="remove_char()">Remove Char</button>
+	<input id= "char_position" type="number" name="name" placeholder="Enter char position">
+	<p id="rem_char"></p>
 
-<button onclick="check_divisible()">Divisible by 3 or 7</button>
-<input id= "number_input" type="number" name="name" placeholder="Enter number">
-<p id="validate_div"></p>
-
-<br>
-<br>
-
-<button onclick="check_numeric()">Check if numeric</button>
-<input id="alphanumeric" type="text" name="name" placeholder="Enter number or string">
-<p id = "validate_numeric"></p>
-
-<br>
-<br>
-<p id= "array_index">Pe pozitia 0</p>
-<input id="array_input" type="text" name="name">
-<button onclick="add_var()">Add Var</button>
-<button onclick="calculate_sum()">Suma</button>
-<p id="array_output" type="text" name=name>
+	<button onclick="check_divisible()">Divisible by 3 or 7</button>
+	<input id= "number_input" type="number" name="name" placeholder="Enter number">
+	<p id="validate_div"></p>
+	<br>
+	<button onclick="check_numeric()">Check if numeric</button>
+	<input id="alphanumeric" type="text" name="name" placeholder="Enter number or string">
+	<p id = "validate_numeric"></p>
+	<br>
+	<p id= "array_index">Pe pozitia 0</p>
+	<input id="array_input" type="text" name="name">
+	<button onclick="add_var()">Add Var</button>
+	<button onclick="calculate_sum()">Suma</button>
+	<p id="array_output" type="text" name=name>
+	<br>
+	<h1> Lab 7 </h1>
+	<p> 1. Fix the following code to display 10</p>
+	<p id= "fix1"></p>
+	<br>
+	<p> 2. Fix the following code to display 0,1,2,3,4 (don’t use „let”)
+	(HINT: IIFE, scope) ---Check Console---</p>
+	<p id= "fix2"> </p>
+	<p> Fix the following code to actually catch the error ---Check Console---</p>
 <script type="text/javascript">
 	//string
 	var word='Abracadabra';
 	document.getElementById("rev_string").innerHTML = word;
 
 
-	function reverse_string(){
-
+	function reverse_string()
+	{
 	var splitString = word.split("");
 	var reverseArray = splitString.reverse();
 	var joinArray = reverseArray.join("");
 	document.getElementById("rev_string").innerHTML = joinArray;
 	console.log(joinArray);
 	word=joinArray;
-
 	}
 
 	//number
 	var number=123456;
 	document.getElementById("rev_number").innerHTML = number;
 
-	function reverse_number(){
+	function reverse_number()
+	{
 	var n= number;
 	n = n + "";
 	number = n.split("").reverse().join("");
@@ -64,7 +68,8 @@
 	//remove char
 	var string="ABCDEFG";
 	document.getElementById("rem_char").innerHTML = string;
-	function remove_char(){
+	function remove_char()
+	{
 		var char_pos=document.getElementById('char_position').value;
 		var part1=string.substring(0,char_pos);
 		char_pos++;
@@ -76,7 +81,8 @@
 
 	//check div
 
-	function check_divisible(){
+	function check_divisible()
+	{
 	var x = document.getElementById("number_input").value;
 		if((x%3==0)||(x%7==0))
 			document.getElementById("validate_div").innerHTML = "true";
@@ -85,7 +91,8 @@
 	}
 
 	// check if is numeric
-	function check_numeric(){
+	function check_numeric()
+	{
 		var x = document.getElementById("alphanumeric").value;
 		if(isNaN(x))
 			document.getElementById("validate_numeric").innerHTML = "false";
@@ -94,21 +101,51 @@
 	}
 
 	//add var to array
-	var i=0;
-	var a = [];
-	function add_var(){
+
+	function add_var()
+	{
+		var i=0;
+		var a = [];
 		 a.push(document.getElementById("array_input").value);
 		 document.getElementById("array_input").value = '';
 		 i++;
 		 document.getElementById("array_index").innerHTML = "Pe pozitia" + i;
 	}
 	
-	function calculate_sum(){
+	function calculate_sum()
+	{
+
 		var sum = a.reduce( function(total, amount){
   		return total + amount
 		});
 		document.getElementById("array_output").innerHTML =sum;
 	}
+
+	//lab 7 fix 1
+	var a = 1;
+	function b() {
+	window.a = 10;
+	return;
+	function a() {} //HINT: local scope
+	}
+	b();
+	document.getElementById("fix1").innerHTML = "a= " + a;
+
+	//fix2
+	for (var i = 0; i < 5; i++) {
+	setTimeout((function() { console.log(i); }()), i * 1000 );
+	}
+
+	//fix3
+	try {
+		setTimeout((function(){ throw new Error('example');}()), 1000);
+	} 
+	catch (err) {
+		console.log(err);
+	}
+
+	//fix4
+
 </script>
 </body>
 </html>
